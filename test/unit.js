@@ -34,7 +34,8 @@ test('host of a site uses the app path', function (t) {
   var urls = relative({
     headers: {
       'user-agent': test_ua,
-      'host': 'ryanramage.redmantech.ca'
+      'host': 'ryanramage.redmantech.ca',
+      'x-engine-path': '/app'
     }
   }, {
     'assets': '/assets'
