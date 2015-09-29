@@ -43,3 +43,21 @@ test('host of a site uses the app path', function (t) {
   t.equal(urls.assets, '//ryanramage.redmantech.ca/app/login/assets')
   t.end()
 })
+
+test('root widget path removes all slashes', function (t) {
+  var config = {
+    widget_path: '/'
+  }
+  var relative = mod(config)
+  var urls = relative({
+    headers: {
+      'user-agent': test_ua,
+      'host': 'widget-dev.redmantech.com'
+    }
+  }, {
+    'assets': '/assets'
+  })
+  t.equal(urls.assets, '//widget-dev.redmantech.com/assets')
+  t.end()
+})
+
