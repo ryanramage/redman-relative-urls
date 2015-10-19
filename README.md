@@ -1,10 +1,7 @@
 # redman-relative-urls
 
-IMPORTANT - PLEASE FOLLOW:
-
-https://wiki.redmantech.ca/Development_Department/npm/New_node_module_project_checklist
-
-WIP - nothing to see here
+A way of rewriting urls relative to where the request was served from. Make apps more portable 
+to different paths, and testing configurations.
 
 ```
 npm install redman-relative-urls
